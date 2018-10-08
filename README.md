@@ -26,6 +26,10 @@ FOLDER_PATH = "C:/Users/Timothy/Desktop/OrgaQuant Paper/Example Analysis/Ana/"
 look_pix = 600
 slide_pix = 600
 ```
+3. Run all the cells
+
+When the script finishes running you should have a CSV file with the results as well as a labeled image file. If you encounter any problems please raise the issue here on Github.
+
 ## Contributing
 If you have any improvements in mind please feel free to contribute to the project via GitHub. If you encounter any issue running the above code please raise the issue here.
 
