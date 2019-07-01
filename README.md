@@ -20,11 +20,11 @@ We recommend that you install Anaconda and run the code on an NVIDIA GPU with at
 2. Modify the following to point to the correct files:
 
 ```python
-PATH_TO_CKPT = "C:/Users/Timothy/Desktop/OD/object_detection/organoid_inference_graph/frozen_inference_graph.pb"
-PATH_TO_LABELS = "C:/Users/Timothy/Desktop/OD/object_detection/data/organoid_label_map.pbtxt"
-FOLDER_PATH = "C:/Users/Timothy/Desktop/OrgaQuant Paper/Example Analysis/Ana/"
-look_pix = 600
-slide_pix = 600
+PATH_TO_CKPT = "object_detection/organoid_inference_graph/frozen_inference_graph.pb"
+PATH_TO_LABELS = "object_detection/data/organoid_label_map.pbtxt"
+FOLDER_PATH = ""
+look_pix = 500
+slide_pix = 300
 ```
 3. Run all the cells
 
