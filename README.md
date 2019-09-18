@@ -34,4 +34,4 @@ When the script finishes running you should have a CSV file with the results as 
 If you have any improvements in mind please feel free to contribute to the project via GitHub. If you encounter any issue running the above code please raise the issue here.
 
 ## Citation
-Please cite our paper when this code is used along with the Object Detection API
+https://www.nature.com/articles/s41598-019-48874-y
