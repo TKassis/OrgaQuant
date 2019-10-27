@@ -15,9 +15,9 @@ We recommend an NVIDIA GPU with at least 8 GB of GPU memory. Other configuration
 5. Install git using `conda install git`
 6. Install dependencies using `pip install keras-resnet==0.2.0 cython keras matplotlib opencv-python progressbar2`
 7. Install Streamlit using `pip install streamlit`
-8. Clone is repository using `git clone https://github.com/TKassis/OrgaQuant.git`
+8. Clone this repository using `git clone https://github.com/TKassis/OrgaQuant.git`
 9. Move into the directory using `cd OrgaQuant`
-10. Install keras_retinanet using `python setup.py build_ext --inplace`
+10. Install _keras_retinanet_ using `python setup.py build_ext --inplace`. More information here: https://github.com/fizyr/keras-retinanet
 11. Create a new folder called _trained_models_ and place in it the trained model from https://github.com/TKassis/OrgaQuant/releases/download/v0.1/orgaquant_intestinal_v2.h5
 
 ## Usage
