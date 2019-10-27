@@ -1,32 +1,27 @@
 # OrgaQuant
-Intestinal Organoid Localization and Quantification Using Deep Convolutional Neural Networks
+OrgaQuant: Human Intestinal Organoid Localization and Quantification Using Deep Convolutional Neural Networks
 
 ## Getting Started
-### Prerequisites
-You must have the following installed:
-1. Python 3.6
-2. Jupyter Notebook
-3. Pandas
-4. TensorFlow (with the appropriate CUDA version)
-
-We recommend that you install Anaconda and run the code on an NVIDIA GPU with at least 4GB of GPU memory.
+### Hardware Prerequisites
+We recommend an NVIDIA GPU with at least 8 GB of GPU memory. Other configurations might work but are not tested.
 
 ### Installation
-1. Download or clone the OrgaQuant repository.
-2. Download and unzip the trained intestinal organoid model from https://osf.io/dj4uk/
+1. Install Anaconda from https://www.anaconda.com/distribution/
+2. Create a new conda environment using `conda create -n orgaquant python=3.6`
+3. Activate the newly created environment using `activate orgaquant`
+4. Install Tensorflow using `conda install tensorflow-gpu=1.14`
+5. Install git using `conda install git`
+6. Install dependencies using `pip install keras-resnet==0.2.0 cython keras matplotlib opencv-python progressbar2`
+7. Install Streamlit using `pip install streamlit`
+8. Clone is repository using `git clone https://github.com/TKassis/OrgaQuant.git`
+9. Move into the directory using `cd OrgaQuant`
+10. Install keras_retinanet using `python setup.py build_ext --inplace`
 
 ## Usage
-1. Open the Jupyter Notebook called orgaquant_batch in the object_detection folder.
-2. Modify the following to point to the correct files:
-
-```python
-PATH_TO_CKPT = "object_detection/organoid_inference_graph/frozen_inference_graph.pb"
-PATH_TO_LABELS = "object_detection/data/organoid_label_map.pbtxt"
-FOLDER_PATH = ""
-look_pix = 500
-slide_pix = 300
-```
-3. Run all the cells
+1. Within the OrgaQuant directory run the following: `streamlit run orgaquant.py`
+2. Indicate the folder that contains the images
+3. Modify the sliders to adjust some of the settings based your images.
+4. You can batch process all your images by clicking on 'Process All'. This will use the same settings you adjusted for the sample image.
 
 When the script finishes running you should have a CSV file with the results as well as a labeled image file. If you encounter any problems please raise the issue here on Github.
 

@@ -1,0 +1,10 @@
+cython
+keras-resnet==0.2.0
+h5py
+keras
+matplotlib
+numpy>=1.14
+opencv-python>=3.3.0
+pillow
+progressbar2
+tensorflow-gpu==1.14
