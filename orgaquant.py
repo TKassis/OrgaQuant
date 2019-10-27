@@ -17,8 +17,8 @@ import matplotlib.pyplot as plt
 #    return model
 
 st.title('OrgaQuant: Organoid Quantification')
-#model = load_orga_model("trained_models/resnet50_csv_50_inference.h5")
-model = models.load_model("trained_models/resnet50_csv_50_inference.h5", backbone_name='resnet50')
+#model = load_orga_model("trained_models/orgaquant_intestinal_v2.h5")
+model = models.load_model("trained_models/orgaquant_intestinal_v2.h5", backbone_name='resnet50')
 
 st.sidebar.header('Settings')
 

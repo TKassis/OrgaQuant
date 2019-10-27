@@ -1,6 +1,8 @@
 # OrgaQuant
 OrgaQuant: Human Intestinal Organoid Localization and Quantification Using Deep Convolutional Neural Networks
 
+![Screenshot of User Interface]{/readme_images/screenshot.jpg}
+
 ## Getting Started
 ### Hardware Prerequisites
 We recommend an NVIDIA GPU with at least 8 GB of GPU memory. Other configurations might work but are not tested.
@@ -16,6 +18,7 @@ We recommend an NVIDIA GPU with at least 8 GB of GPU memory. Other configuration
 8. Clone is repository using `git clone https://github.com/TKassis/OrgaQuant.git`
 9. Move into the directory using `cd OrgaQuant`
 10. Install keras_retinanet using `python setup.py build_ext --inplace`
+11. Create a new folder called _trained_models_ and place in it the trained model from https://github.com/TKassis/OrgaQuant/releases/download/v0.1/orgaquant_intestinal_v2.h5
 
 ## Usage
 1. Within the OrgaQuant directory run the following: `streamlit run orgaquant.py`
