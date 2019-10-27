@@ -1,7 +1,7 @@
 # OrgaQuant
 OrgaQuant: Human Intestinal Organoid Localization and Quantification Using Deep Convolutional Neural Networks
 
-![Screenshot of User Interface]{/readme_images/screenshot.jpg}
+![Screenshot of User Interface](/readme_images/screenshot.jpg)
 
 ## Getting Started
 ### Hardware Prerequisites
