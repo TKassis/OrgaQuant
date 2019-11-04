@@ -24,7 +24,7 @@ model = models.load_model("trained_models/orgaquant_intestinal_v2.h5", backbone_
 
 st.sidebar.header('Settings')
 
-folder_path = st.sidebar.text_input("Path to folder containing images")
+folder_path = st.sidebar.text_input("Path to folder containing images:", value='test_folder')
 
 imagelist=[]
 
