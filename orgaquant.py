@@ -16,8 +16,10 @@ import matplotlib.pyplot as plt
 #    model = models.load_model(model_path, backbone_name='resnet50')
 #    return model
 
-st.title('OrgaQuant: Organoid Quantification')
 #model = load_orga_model("trained_models/orgaquant_intestinal_v2.h5")
+
+
+st.title('OrgaQuant: Organoid Quantification')
 model = models.load_model("trained_models/orgaquant_intestinal_v2.h5", backbone_name='resnet50')
 
 st.sidebar.header('Settings')
@@ -30,7 +32,7 @@ for root, directories, filenames in os.walk(folder_path):
     imagelist = imagelist + [x for x in filenames if x.endswith(('.jpg','.tif', '.png', '.jpeg', '.tiff'))]
 
 sample_image = st.sidebar.slider("Sample Image", min_value=0, max_value=len(imagelist), step=1, value=0)
-min_side = st.sidebar.slider("Image Size", min_value=600, max_value=2000, step=100, value=1200)
+min_side = st.sidebar.slider("Image Size", min_value=900, max_value=2000, step=100, value=1200)
 contrast = st.sidebar.slider("Image Contrast", min_value=0.0, max_value=3.0, step=0.25, value=1.5)
 threshold = st.sidebar.slider("Confidence Threshold", min_value=0.0, max_value=1.0, step=0.05, value=0.75)
 
@@ -70,6 +72,7 @@ st.write("Number of organoids detected:", num_org)
 st.sidebar.subheader('Batch Processing')
 
 if st.sidebar.button("Process All"):
+    progress_bar = st.sidebar.progress(0)
     for i, filename in enumerate(imagelist):
         try:
             IMAGE_PATH = os.path.join(root,filename)
@@ -108,12 +111,14 @@ if st.sidebar.button("Process All"):
             output['Diameter 2 (Pixels)'] = output['y2'] - output['y1']
             output.to_csv(IMAGE_PATH + '.csv', index=False)
             plt.imsave(IMAGE_PATH + '_detected.png', draw)
-
+            progress_bar.progress((i+1)/len(imagelist))
         except:
             pass
 
+    st.success('Analysis complete!')
+
 else:
-    st.sidebar.text("Click above to process all images with the above settings")
+    st.sidebar.text("Click above to process all images.")
 
 st.sidebar.markdown('If you find this helpful for your research please cite: \
 _[OrgaQuant: Human Intestinal Organoid Localization and Quantification Using Deep Convolutional Neural Networks](https://www.nature.com/articles/s41598-019-48874-y)_.')
