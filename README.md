@@ -1,5 +1,6 @@
 # OrgaQuant
-OrgaQuant: Human Intestinal Organoid Localization and Quantification Using Deep Convolutional Neural Networks
+OrgaQuant is a simple to use script for measuring organoid number and diameter in 3D cultures. While this repository contains an improved version of the code described in our original paper, please refer
+to the manuscript for details. The original code described in the paper is available upon request but is much slower than this current version. We recommend you use the update code avaialble here.
 
 ![Screenshot of User Interface](/readme_images/screenshot.jpg)
 
