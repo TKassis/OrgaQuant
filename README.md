@@ -1,6 +1,8 @@
 # OrgaQuant
-OrgaQuant is a simple to use script for measuring organoid number and diameter in 3D cultures. While this repository contains an improved version of the code described in our original paper, please refer
-to the manuscript for details. The original code described in the paper is available upon request but is much slower than this current version. We recommend you use the update code avaialble here.
+OrgaQuant is a simple-to-use python script with a user interface for measuring organoid number and diameter in 3D cultures.
+While this repository contains an improved version of the code described in our [original paper](https://www.nature.com/articles/s41598-019-48874-y),
+please refer to the manuscript for details. The original code described in the paper is available upon request
+but is much slower than this current version. We recommend you use the updated code available here.
 
 ![Screenshot of User Interface](/readme_images/screenshot.jpg)
 
@@ -33,4 +35,9 @@ When the script finishes running you should have a CSV file with the results as 
 If you have any improvements in mind please feel free to contribute to the project via GitHub. If you encounter any issue running the above code please raise the issue here.
 
 ## Citation
+If you use this code, please cite:
+```
+Kassis, T., Hernandez-Gordillo, V., Langer, R. & Griffith, L. G. OrgaQuant: Human Intestinal Organoid Localization and Quantification Using Deep Convolutional Neural Networks. Sci. Rep. 9, 1–7 (2019).
+```
+
 https://www.nature.com/articles/s41598-019-48874-y
