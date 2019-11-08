@@ -11,16 +11,14 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-#@st.cache(allow_output_mutation=True)
-#def load_orga_model(model_path):
-#    model = models.load_model(model_path, backbone_name='resnet50')
-#    return model
-
-#model = load_orga_model("trained_models/orgaquant_intestinal_v2.h5")
-
-
 st.title('OrgaQuant: Organoid Quantification')
-model = models.load_model("trained_models/orgaquant_intestinal_v2.h5", backbone_name='resnet50')
+
+#@st.cache(allow_output_mutation=True)
+def load_orga_model():
+    model = models.load_model("trained_models/orgaquant_intestinal_v2.h5", backbone_name='resnet50')
+    return model
+
+model = load_orga_model()
 
 st.sidebar.header('Settings')
 
@@ -33,7 +31,7 @@ for root, directories, filenames in os.walk(folder_path):
 
 sample_image = st.sidebar.slider("Sample Image", min_value=0, max_value=len(imagelist), step=1, value=0)
 min_side = st.sidebar.slider("Image Size", min_value=900, max_value=2000, step=100, value=1200)
-contrast = st.sidebar.slider("Image Contrast", min_value=0.0, max_value=3.0, step=0.25, value=1.5)
+contrast = st.sidebar.slider("Image Contrast", min_value=1.0, max_value=3.0, step=0.25, value=1.5)
 threshold = st.sidebar.slider("Confidence Threshold", min_value=0.0, max_value=1.0, step=0.05, value=0.75)
 
 # load image
