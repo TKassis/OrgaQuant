@@ -4,7 +4,7 @@ While this repository contains an improved version of the code described in our 
 please refer to the manuscript for details. The original code described in the paper is available upon request
 but is much slower than this current version. We recommend you use the updated code available here.
 
-![OrgaQuant for Measuring Organoid Diameter in 3D](/readme_images/Figure 1 From Paper.jpg)
+![OrgaQuant for Measuring Organoid Diameter in 3D](/readme_images/Figure_1_From_Paper.jpg)
 
 
 ![Screenshot of User Interface](/readme_images/screenshot.jpg)
