@@ -6,7 +6,7 @@ but is much slower than this current version. We recommend you use the updated c
 
 ![OrgaQuant for Measuring Organoid Diameter in 3D](/readme_images/Figure_1_From_Paper.jpg)
 
-
+### Screenshot of the User Interface
 ![Screenshot of User Interface](/readme_images/screenshot.jpg)
 
 ## Getting Started
@@ -16,25 +16,30 @@ All code was developed an tested in a Windows environment, but should work fine 
 
 ### Installation
 1. Install Anaconda from https://www.anaconda.com/distribution/
-2. Create a new conda environment using `conda create -n orgaquant python=3.6`
+2. Open the Anaconda Prompt and create a new conda environment using `conda create -n orgaquant python=3.6`
 3. Activate the newly created environment using `activate orgaquant`
-4. Install Tensorflow using `conda install tensorflow-gpu=1.14`
+4. Install Tensorflow using `conda install tensorflow-gpu=1.14` (you must have an NVIDIA GPU)
 5. Install git using `conda install git`
 6. Install dependencies using `pip install keras-resnet==0.2.0 cython keras matplotlib opencv-python progressbar2`
 7. Install Streamlit using `pip install streamlit`
-8. Clone this repository using `git clone https://github.com/TKassis/OrgaQuant.git`
+8. Clone the OrgaQuant repository using `git clone https://github.com/TKassis/OrgaQuant.git`
 9. Move into the directory using `cd OrgaQuant`
 10. Install _keras_retinanet_ using `python setup.py build_ext --inplace`. More information [here](https://github.com/fizyr/keras-retinanet)
 11. Download the pre-trained model from [here](https://github.com/TKassis/OrgaQuant/releases/download/v0.1/orgaquant_intestinal_v2.h5) and place inside the _trained_models_ folder.
 
 ## Usage
-1. Within the OrgaQuant directory run the following: `streamlit run orgaquant.py`
-2. Indicate the folder that contains the images (default is _/test_folder_)
+1. Within the OrgaQuant directory run the following: `streamlit run orgaquant.py`. This should automatically open a browser window with the user interface.
+2. Indicate the folder that contains the organoid images (default is _/test_folder_)
 3. Modify the sliders to adjust some of the settings based on your images.
 4. You can batch process all your images by clicking on 'Process All'. This will use the same settings you adjusted for the sample image.
 
 When the script finishes running you should have a CSV file with the results as well as a labeled image file for each image in the folder.
 If you encounter any problems please raise the issue here on [Github](https://github.com/TKassis/OrgaQuant/issues).
+
+## Custom Models
+If you have certain types of organoids for which the trained model provided here does not work we might be able to create a new trained model for you and make it available here if you share some of your images with us.
+Please raise the request as a [Github Issue](https://github.com/TKassis/OrgaQuant/issues). If you would like to train your own model, you make follow the instructions given for the
+[Keras RetinaNet package](https://github.com/fizyr/keras-retinanet).
 
 ## Contributing
 If you have any improvements in mind please feel free to contribute to the project via GitHub. If you encounter any issue running the above code please raise the issue [here](https://github.com/TKassis/OrgaQuant/issues).
@@ -44,5 +49,4 @@ If you use this code, please cite:
 ```
 Kassis, T., Hernandez-Gordillo, V., Langer, R. & Griffith, L. G. OrgaQuant: Human Intestinal Organoid Localization and Quantification Using Deep Convolutional Neural Networks. Sci. Rep. 9, 1–7 (2019).
 ```
-
-https://www.nature.com/articles/s41598-019-48874-y
+The open access paper can be accessed through https://www.nature.com/articles/s41598-019-48874-y.
