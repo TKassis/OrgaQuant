@@ -38,7 +38,7 @@ If you encounter any problems please raise the issue here on [Github](https://gi
 
 ## Custom Models
 If you have certain types of organoids for which the trained model provided here does not work we might be able to create a new trained model for you and make it available here if you share some of your images with us.
-Please raise the request as a [Github Issue](https://github.com/TKassis/OrgaQuant/issues). If you would like to train your own model, you make follow the instructions given for the
+Please raise the request as a [Github Issue](https://github.com/TKassis/OrgaQuant/issues). If you would like to train your own model, you may follow the instructions given for the
 [Keras RetinaNet package](https://github.com/fizyr/keras-retinanet).
 
 ## Contributing

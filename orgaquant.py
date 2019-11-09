@@ -121,4 +121,4 @@ else:
 st.sidebar.markdown('If you find this helpful for your research please cite: \
 _[OrgaQuant: Human Intestinal Organoid Localization and Quantification Using Deep Convolutional Neural Networks](https://www.nature.com/articles/s41598-019-48874-y)_.')
 
-st.sidebar.markdown('For assistance using OrgaQuant please contact _tkassis@mit.edu_')
+st.sidebar.markdown('For assistance or to report bugs, please raise an issue on [GitHub](https://github.com/TKassis/OrgaQuant/issues)')
