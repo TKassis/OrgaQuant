@@ -47,6 +47,8 @@ If you have any improvements in mind please feel free to contribute to the proje
 ## Citation
 If you use this code, please cite:
 ```
-Kassis, T., Hernandez-Gordillo, V., Langer, R. & Griffith, L. G. OrgaQuant: Human Intestinal Organoid Localization and Quantification Using Deep Convolutional Neural Networks. Sci. Rep. 9, 1–7 (2019).
+Kassis et al., OrgaQuant: Human Intestinal Organoid Localization and Quantification Using Deep Convolutional Neural Networks. Sci. Rep. 9, 1–7 (2019).
 ```
 The open access paper can be accessed through https://www.nature.com/articles/s41598-019-48874-y.
+
+OrgaQuant builds on the object detection framework in [Focal Loss for Dense Object Detection](https://arxiv.org/abs/1708.02002) by Lin et al., 2017.
