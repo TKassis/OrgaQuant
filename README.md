@@ -2,7 +2,7 @@
 OrgaQuant is a simple-to-use python script with a user interface for measuring organoid number and diameter in 3D cultures.
 While this repository contains an improved version of the code described in our [original paper](https://www.nature.com/articles/s41598-019-48874-y),
 please refer to the manuscript for details. The original code described in the paper is available upon request
-but is much slower than this current version. We recommend you use the updated code available here.
+but is much slower than this current version. We highly recommend using the updated code available here.
 
 ![OrgaQuant for Measuring Organoid Diameter in 3D](/readme_images/Figure_1_From_Paper.jpg)
 
@@ -11,8 +11,8 @@ but is much slower than this current version. We recommend you use the updated c
 
 ## Getting Started
 ### Hardware Prerequisites
-We recommend an computer with at least 8 GB of RAM and an NVIDIA GPU with at least 8 GB of GPU memory. Other configurations might work but are not tested.
-All code was developed an tested in a Windows environment, but should work fine on both Mac OS and Linux.
+We recommend a computer with at least 8 GB of RAM and an NVIDIA GPU (required) with at least 8 GB of GPU memory. Other configurations might work but are not tested.
+All code was developed and tested in a Windows environment, but should work fine on both Mac OS and Linux.
 
 ### Installation
 1. Install Anaconda from https://www.anaconda.com/distribution/
