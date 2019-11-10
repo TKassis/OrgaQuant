@@ -31,8 +31,11 @@ for root, directories, filenames in os.walk(folder_path):
 
 sample_image = st.sidebar.slider("Sample Image", min_value=0, max_value=len(imagelist), step=1, value=0)
 min_side = st.sidebar.slider("Image Size", min_value=900, max_value=2000, step=100, value=1200)
-contrast = st.sidebar.slider("Image Contrast", min_value=1.0, max_value=3.0, step=0.25, value=1.5)
+st.sidebar.text('Larger "Image Size" allows the detection of smaller orgaoids at the cost of computational demand.')
+contrast = st.sidebar.slider("Contrast", min_value=1.0, max_value=3.0, step=0.25, value=1.5)
+st.sidebar.text('Larger "Contrast" can improve detection sometimes.')
 threshold = st.sidebar.slider("Confidence Threshold", min_value=0.0, max_value=1.0, step=0.05, value=0.75)
+st.sidebar.text('Use larger "Threshold" to eliminate false positives.')
 
 # load image
 image = read_image_bgr(os.path.join(folder_path, imagelist[sample_image]))
