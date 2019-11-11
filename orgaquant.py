@@ -29,12 +29,12 @@ imagelist=[]
 for root, directories, filenames in os.walk(folder_path):
     imagelist = imagelist + [x for x in filenames if x.endswith(('.jpg','.tif', '.png', '.jpeg', '.tiff'))]
 
-sample_image = st.sidebar.slider("Sample Image", min_value=0, max_value=len(imagelist), step=1, value=0)
-min_side = st.sidebar.slider("Image Size", min_value=900, max_value=2000, step=100, value=1200)
+sample_image = st.sidebar.slider("Sample Image:", min_value=0, max_value=len(imagelist), step=1, value=0)
+min_side = st.sidebar.slider("Image Size:", min_value=900, max_value=2000, step=100, value=1200)
 st.sidebar.text('Larger "Image Size" allows the detection of smaller orgaoids at the cost of computational demand.')
-contrast = st.sidebar.slider("Contrast", min_value=1.0, max_value=3.0, step=0.25, value=1.5)
+contrast = st.sidebar.slider("Contrast:", min_value=1.0, max_value=3.0, step=0.25, value=1.5)
 st.sidebar.text('Larger "Contrast" can improve detection sometimes.')
-threshold = st.sidebar.slider("Confidence Threshold", min_value=0.0, max_value=1.0, step=0.05, value=0.75)
+threshold = st.sidebar.slider("Confidence Threshold:", min_value=0.0, max_value=1.0, step=0.05, value=0.75)
 st.sidebar.text('Use larger "Threshold" to eliminate false positives.')
 
 # load image
@@ -63,7 +63,7 @@ for box, score, label in zip(boxes[0], scores[0], labels[0]):
         break
     num_org= num_org + 1
     b = box.astype(int)
-    draw_box(draw, b, color=(0,255,0))
+    draw_box(draw, b, color=(255, 0, 255))
 
 st.image(draw,use_column_width=True)
 st.write("Image name:", imagelist[sample_image])
@@ -105,7 +105,7 @@ if st.sidebar.button("Process All"):
                 out = np.append(out, box.reshape(1,4), axis=0)
 
                 b = box.astype(int)
-                draw_box(draw, b, color=(0,255,0))
+                draw_box(draw, b, color=(255, 0, 255))
 
             output = pd.DataFrame(out,columns=['x1', 'y1', 'x2', 'y2'], dtype=np.int16)
             output['Diameter 1 (Pixels)'] = output['x2'] - output['x1']
