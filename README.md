@@ -11,21 +11,19 @@ but is much slower than this current version. We highly recommend using the upda
 
 ## Getting Started
 ### Hardware Prerequisites
-We recommend a computer with at least 8 GB of RAM and an NVIDIA GPU (required) with at least 8 GB of GPU memory. Other configurations might work but are not tested.
+We recommend a computer with at least 16 GB of RAM and an NVIDIA graphics card (required) with at least 8 GB of GPU memory.
 All code was developed and tested in a Windows environment, but should work fine on both Mac OS and Linux.
 
 ### Installation
 1. Install Anaconda from https://www.anaconda.com/distribution/
 2. Open the Anaconda Prompt and create a new conda environment using `conda create -n orgaquant python=3.6`
 3. Activate the newly created environment using `activate orgaquant`
-4. Install Tensorflow using `conda install tensorflow-gpu=1.14` (you must have an NVIDIA GPU)
-5. Install git using `conda install git`
-6. Install dependencies using `pip install keras-resnet==0.2.0 cython keras matplotlib opencv-python progressbar2`
-7. Install Streamlit using `pip install streamlit`
-8. Clone the OrgaQuant repository using `git clone https://github.com/TKassis/OrgaQuant.git`
-9. Move into the directory using `cd OrgaQuant`
-10. Install _keras_retinanet_ using `python setup.py build_ext --inplace`. More information [here](https://github.com/fizyr/keras-retinanet)
-11. Download the pre-trained model from [here](https://github.com/TKassis/OrgaQuant/releases/download/v0.1/orgaquant_intestinal_v2.h5) and place inside the _trained_models_ folder.
+4. Install Tensorflow and Git using `conda install tensorflow-gpu=1.14 git`
+5. Install dependencies using `pip install keras-resnet==0.2.0 cython keras matplotlib opencv-python progressbar2 streamlit`
+6. Clone the OrgaQuant repository using `git clone https://github.com/TKassis/OrgaQuant.git`
+7. Move into the directory using `cd OrgaQuant`
+8. Install _keras_retinanet_ using `python setup.py build_ext --inplace`. More information [here](https://github.com/fizyr/keras-retinanet)
+9. Download the pre-trained model from [here](https://github.com/TKassis/OrgaQuant/releases/download/v0.1/orgaquant_intestinal_v2.h5) and place inside the _trained_models_ folder.
 
 ## Usage
 1. Within the OrgaQuant directory run the following: `streamlit run orgaquant.py`. This should automatically open a browser window with the user interface.

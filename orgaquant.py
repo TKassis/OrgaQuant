@@ -30,8 +30,8 @@ for root, directories, filenames in os.walk(folder_path):
     imagelist = imagelist + [x for x in filenames if x.endswith(('.jpg','.tif', '.png', '.jpeg', '.tiff'))]
 
 sample_image = st.sidebar.slider("Sample Image:", min_value=0, max_value=len(imagelist), step=1, value=0)
-min_side = st.sidebar.slider("Image Size:", min_value=900, max_value=2000, step=100, value=1200)
-st.sidebar.text('Larger "Image Size" allows the detection of smaller orgaoids at the cost of computational demand.')
+min_side = st.sidebar.slider("Image Size:", min_value=800, max_value=2000, step=100, value=1200)
+st.sidebar.text('Larger "Image Size" allows you to detect smaller orgaoids at the cost of computational demand.')
 contrast = st.sidebar.slider("Contrast:", min_value=1.0, max_value=3.0, step=0.25, value=1.5)
 st.sidebar.text('Larger "Contrast" can improve detection sometimes.')
 threshold = st.sidebar.slider("Confidence Threshold:", min_value=0.0, max_value=1.0, step=0.05, value=0.75)
