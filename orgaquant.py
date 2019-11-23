@@ -27,7 +27,7 @@ folder_path = st.sidebar.text_input("Path to folder containing images:", value='
 imagelist=[]
 
 for root, directories, filenames in os.walk(folder_path):
-    imagelist = imagelist + [x for x in filenames if x.endswith(('.jpg','.tif', '.png', '.jpeg', '.tiff'))]
+    imagelist = imagelist + [os.path.join(root,x) for x in filenames if x.endswith(('.jpg','.tif', '.png', '.jpeg', '.tiff'))]
 
 sample_image = st.sidebar.slider("Sample Image:", min_value=0, max_value=len(imagelist), step=1, value=0)
 min_side = st.sidebar.slider("Image Size:", min_value=800, max_value=2000, step=100, value=1200)
@@ -38,7 +38,8 @@ threshold = st.sidebar.slider("Confidence Threshold:", min_value=0.0, max_value=
 st.sidebar.text('Use larger "Threshold" to eliminate false positives.')
 
 # load image
-image = read_image_bgr(os.path.join(folder_path, imagelist[sample_image]))
+#image = read_image_bgr(os.path.join(folder_path, imagelist[sample_image]))
+image = read_image_bgr(imagelist[sample_image])
 
 # copy to draw on
 draw = image.copy()
@@ -76,7 +77,8 @@ if st.sidebar.button("Process All"):
     progress_bar = st.sidebar.progress(0)
     for i, filename in enumerate(imagelist):
         try:
-            IMAGE_PATH = os.path.join(root,filename)
+            #IMAGE_PATH = os.path.join(root,filename)
+            IMAGE_PATH = filename
             # load image
             image = read_image_bgr(IMAGE_PATH)
 
