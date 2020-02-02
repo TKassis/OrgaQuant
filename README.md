@@ -23,7 +23,7 @@ All code was developed and tested in a Windows environment, but should work fine
 6. Clone the OrgaQuant repository using `git clone https://github.com/TKassis/OrgaQuant.git`
 7. Move into the directory using `cd OrgaQuant`
 8. Install _keras_retinanet_ using `python setup.py build_ext --inplace`. More information [here](https://github.com/fizyr/keras-retinanet)
-9. Download the pre-trained model from [here](https://github.com/TKassis/OrgaQuant/releases/download/v0.1/orgaquant_intestinal_v2.h5) and place inside the _trained_models_ folder.
+9. Download the pre-trained model from [here](https://github.com/TKassis/OrgaQuant/releases/download/v0.2/orgaquant_intestinal_v3.h5) and place inside the _trained_models_ folder.
 
 ## Usage
 1. Within the OrgaQuant directory run the following: `streamlit run orgaquant.py`. This should automatically open a browser window with the user interface.
