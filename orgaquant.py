@@ -30,7 +30,7 @@ folder_path = st.sidebar.text_input("Path to folder containing images:", value='
 imagelist=[]
 
 for root, directories, filenames in os.walk(folder_path):
-    imagelist = imagelist + [os.path.join(root,x) for x in filenames if x.endswith(('.jpg','.tif', '.png', '.jpeg', '.tiff'))]
+    imagelist = imagelist + [os.path.join(root,x) for x in filenames if x.endswith(('.jpg','.tif','.TIF', '.png', '.jpeg', '.tiff'))]
 
 sample_image = st.sidebar.slider("Sample Image:", min_value=0, max_value=len(imagelist), step=1, value=0)
 min_side = st.sidebar.slider("Image Size:", min_value=800, max_value=2000, step=100, value=1200)
