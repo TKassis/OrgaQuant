@@ -13,14 +13,17 @@ import matplotlib.pyplot as plt
 
 st.title('OrgaQuant: Organoid Quantification')
 
+st.sidebar.header('Settings')
+
+model_path = st.sidebar.text_input("Saved model to use (stored in train_models folder):", value='orgaquant_intestinal_v3')
+
 #@st.cache(allow_output_mutation=True)
 def load_orga_model():
-    model = models.load_model("trained_models/orgaquant_intestinal_v2.h5", backbone_name='resnet50')
+    model = models.load_model(os.path.join('trained_models', model_path + '.h5'), backbone_name='resnet50')
     return model
 
 model = load_orga_model()
 
-st.sidebar.header('Settings')
 
 folder_path = st.sidebar.text_input("Path to folder containing images:", value='test_folder')
 
