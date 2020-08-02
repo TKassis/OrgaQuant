@@ -17,10 +17,9 @@ st.sidebar.header('Settings')
 
 model_path = st.sidebar.text_input("Saved model to use (stored in train_models folder):", value='orgaquant_intestinal_v3')
 
-#@st.cache(allow_output_mutation=True)
+st.cache(allow_output_mutation=True)
 def load_orga_model():
-    model = models.load_model(os.path.join('trained_models', model_path + '.h5'), backbone_name='resnet50')
-    return model
+    return models.load_model(os.path.join('trained_models', model_path + '.h5'), backbone_name='resnet50')
 
 model = load_orga_model()
 
