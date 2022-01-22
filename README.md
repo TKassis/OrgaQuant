@@ -1,5 +1,5 @@
 # Important Note
-This repository is no longer maintained. There have has been tremendous progress since the release of this code in the field of computer vision and we encourage you to seek more up-to-date alternative implementations. While we haven't tested this, we suggest you look at [OrganoID](https://github.com/jono-m/OrganoID) recently released by J. Matthews et al. from the University of Chicago.
+This repository is no longer maintained. There has been tremendous progress since the release of this code in the field of computer vision and we encourage you to seek more up-to-date alternative implementations. While we haven't tested this, we suggest you look at [OrganoID](https://github.com/jono-m/OrganoID) recently released by J. Matthews et al. from the University of Chicago.
 
 
 # OrgaQuant
