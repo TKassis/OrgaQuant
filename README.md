@@ -1,3 +1,7 @@
+# Important Note
+This repository is no longer maintained. There have has been tremendous progress since the release of this code in the field of computer vision and we encourage you to seek more up-to-date alternative implementations. While we haven't tested this, we suggest you look at [OrganoID](https://github.com/jono-m/OrganoID) recently released by J. Matthews et al. from the University of Chicago.
+
+
 # OrgaQuant
 OrgaQuant is a simple-to-use python script with a user interface for measuring organoid number and diameter in 3D cultures.
 While this repository contains an improved version of the code described in our [original paper](https://www.nature.com/articles/s41598-019-48874-y),
